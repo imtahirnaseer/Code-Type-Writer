@@ -2,7 +2,7 @@
 
 A powerful and interactive typing simulator for code, designed to mimic the experience of typing out code in a typewriter style. It supports various programming languages, customizable paste modes, and themes to enhance the user experience.
 
-[![Watch the Video]()]([code.mp4](https://github.com/imtahirnaseer/Code-Type-Writer/blob/main/code.mp4))
+![User Interface](code.png)
 
 ## **Why Code Type-Writer is Perfect for YouTubers?** 🎥  
 
@@ -44,9 +44,8 @@ Imagine you're teaching a JavaScript function on YouTube. Instead of directly pa
 ---
 ## Demo
 
-You can see a live demo of the Code Type-Writer [Live Demo](hhtps://imtahirnaseer.github.io/Code-Type-Writer/). Below is a screenshot of the project in action.
-
-![Live Demo Screenshot](code.png)
+You can see a live demo of the Code Type-Writer [Live Demo](https://imtahirnaseer.github.io/Code-Type-Writer). Below is a screenshot of the project in action.
+[![Watch the Video](https://img.icons8.com/ios/452/video.png)](code.mp4)
 
 ## Installation
 
