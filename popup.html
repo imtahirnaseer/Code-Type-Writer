@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Type-Writer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsIaQ4_1M3yHo9t2zYXYgAgwIaGL2oh2ijFcjDJOS5gqesOzIsdgxacm3X5BkqZDEDZP4Bjyd51NIm0zM-wJIrJ67jL7ef4KJOeL3w_nRft2OPeGCcpW7U62cmeub3PITuvZhVicC-8LksrWITOU7KnaPHu3fmzJV3KzmvA6gqT-PYlUpGx9vDIyRTaSaB/s503/Screenshot_2025-01-07_013742-removebg-preview.png" type="image/icon type">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+      
+    <!-- Include FontAwesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Include Prism.js CSS for Syntax Highlighting -->
+    <link id="prism-theme" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+    <!-- Include Prism.js for Syntax Highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>&lt;/Code Type-Writer&gt;</h1>
+            <div class="icons">
+                <i id="github-icon" class="fa-brands fa-github" title="GitHub"></i>
+                <i id="instagram-icon" class="fa-brands fa-instagram" title="Instagram"></i>
+                <i id="play-icon" class="fa-solid fa-play" title="Play"></i>
+                <i id="stop-icon" class="fa-solid fa-stop" title="Stop the Code Writing"></i>
+                <i id="robot-icon" class="fa-solid fa-robot" title="Virtual Assistant"></i>
+                <i id="refresh-icon" class="fa-solid fa-refresh" title="Refresh"></i>
+                <i id="settings-icon" class="fa-solid fa-cogs" title="Settings"></i>
+            </div>
+        </div>
+        <div id="language-display">
+            <i class="fa-solid fa-code"></i>
+            <span id="language-text">HTML</span>
+        </div>
+        <div id="editor-container">
+            <pre id="editor" class="language-html" contenteditable="true"></pre>
+        </div>
+        <div id="settings-modal" class="modal hidden">
+            <div class="modal-content">
+                <span id="close-modal" class="close">&times;</span>
+                <h2>Settings</h2>
+                <div class="form-group">
+                    <label for="mode">Paste Mode:</label>
+                    <select id="mode">
+                        <option value="character">Character by Character</option>
+                        <option value="word">Word by Word</option>
+                        <option value="line">Line by Line</option>
+                        <option value="full">Full Text</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="speed">Speed (ms per step):</label>
+                    <input type="number" id="speed" value="100" min="50" step="50">
+                </div>
+                <div class="form-group">
+                    <label for="language">Language:</label>
+                    <select id="language">
+                        <!-- Add 50 programming languages here -->
+                        <option value="html">HTML</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="css">CSS</option>
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option value="c">C</option>
+                        <option value="csharp">C#</option>
+                        <option value="cpp">C++</option>
+                        <option value="php">PHP</option>
+                        <option value="ruby">Ruby</option>
+                        <option value="swift">Swift</option>
+                        <option value="typescript">TypeScript</option>
+                        <option value="go">Go</option>
+                        <option value="rust">Rust</option>
+                        <option value="kotlin">Kotlin</option>
+                        <option value="scala">Scala</option>
+                        <option value="r">R</option>
+                        <option value="perl">Perl</option>
+                        <option value="lua">Lua</option>
+                        <option value="bash">Bash</option>
+                        <option value="powershell">PowerShell</option>
+                        <option value="sql">SQL</option>
+                        <option value="dart">Dart</option>
+                        <option value="haskell">Haskell</option>
+                        <option value="elixir">Elixir</option>
+                        <option value="clojure">Clojure</option>
+                        <option value="fsharp">F#</option>
+                        <!-- Add more languages as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="theme">Theme:</label>
+                    <select id="theme">
+                        <option value="prism-tomorrow">Tomorrow</option>
+                        <option value="prism-okaidia">Okaidia</option>
+                        <option value="prism-coy">Coy</option>
+                        <option value="prism-solarizedlight">Solarized Light</option>
+                        <option value="prism-solarizeddark">Solarized Dark</option>
+                        <option value="prism-twilight">Twilight</option>
+                        <option value="prism-dracula">Dracula</option>
+                        <option value="prism-materialdark">Material Dark</option>
+                        <option value="prism-materiallight">Material Light</option>
+                        <option value="prism-hopscotch">Hopscotch</option>
+                        <option value="prism-atom-dark">Atom Dark</option>
+                        <option value="prism-atom-light">Atom Light</option>
+                        <option value="prism-xonokai">Xonokai</option>
+                        <option value="prism-funky">Funky</option>
+                        <option value="prism-pojoaque">Pojoaque</option>
+                        <option value="prism-duotone-dark">Duotone Dark</option>
+                        <option value="prism-duotone-light">Duotone Light</option>
+                        <option value="prism-nord">Nord</option>
+                        <option value="prism-ghcolors">GitHub Colors</option>
+                        <option value="prism-vscodedark">VS Code Dark</option>
+                        <option value="prism-vscodelight">VS Code Light</option>
+                        <option value="prism-zenburn">Zenburn</option>
+                        <option value="prism-coldark-coldark">Coldark Coldark</option>
+                        <option value="prism-coldark-dark">Coldark Dark</option>
+                        <option value="prism-coldark-warm">Coldark Warm</option>
+                        <option value="prism-coldark-neutral">Coldark Neutral</option>
+                        <option value="prism-coldark-light">Coldark Light</option>
+                        <option value="prism-coldark-highcontrast">Coldark High Contrast</option>
+                        <option value="prism-coldark-soft">Coldark Soft</option>
+                        <!-- Add more themes as needed -->
+                    </select>
+                </div>
+                <div class="button-container">
+                    <button id="save-settings" class="save-button">Save Changes</button>
+                    <button id="cancel-settings" class="cancel-button">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Include Prism.js -->
+    <script src="popup.js"></script>
+</body>
+
+</html>
