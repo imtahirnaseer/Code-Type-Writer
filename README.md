@@ -20,7 +20,7 @@ A powerful and interactive typing simulator for code, designed to mimic the expe
 
 ### **4. Effortless Setup for Content Creation**  
 - Just **paste your code** into the editor, and the tool handles the rest.  
-- Save time and focus on delivering high-quality tutorials.
+- Save time and focus on delivering high-quality tutorials.creator
 
 ## **How This Tool Can Help You?**  
 
